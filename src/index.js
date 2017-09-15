@@ -1,17 +1,8 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import reducer from './reducers'
-import App from './containers/App'
-import registerServiceWorker from './registerServiceWorker'
-
-let store = createStore(reducer)
+import Root from './containers/Root'
 
 render(
-  <Provider store={store}>
-      <App />
-  </Provider>,
+  <Root />,
   document.getElementById('root')
 )
-registerServiceWorker()
